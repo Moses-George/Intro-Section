@@ -1,0 +1,291 @@
+body {
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    margin: 0;
+    background-color: hsl(0, 0%, 98%);
+    max-width: 100%;
+}
+
+li {
+    list-style: none;
+    margin-bottom: 2em;
+    font-weight: 700;
+}
+
+ul {
+    padding: 1em 1em 0 0;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: 1fr 6fr 2fr;
+    color: hsl(0, 0%, 41%);
+}
+
+.logo, .navlinks, .login-register {
+    padding: 1.4em;
+}
+
+.logo {
+    justify-self: flex-end;
+    align-self: flex-end;
+}
+
+.navlinks {
+    display: grid;
+    grid-template-columns: 0.12fr 0.12fr 0.1fr 0.1fr ;
+    grid-column-gap: 2em;
+    align-self: center;
+}
+
+.career {
+    padding-left: 0.6em;
+    cursor: pointer;
+}
+
+.login-register {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0.8em;
+}
+
+.list {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 5%;
+}
+
+.register, .slide-register {
+    justify-self: center;
+    border: 2px solid hsl(0, 0%, 41%);
+    text-align: center;
+    border-radius: 1em;
+    padding: .4em .9em .5em .9em;
+}
+
+.login {
+    justify-self: end;
+    align-self: center;
+}
+
+.register:hover, .login:hover, .active:hover, .slide-link:hover, .features-menu > span:hover, .company-menu > p:hover {
+    color: hsl(0, 0%, 8%);
+    cursor: pointer;
+}
+
+.open-menu {
+    display: none;
+}
+
+#content {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.description {
+    display: grid;
+    padding-top: 4.5em;
+    justify-self: end;
+}
+
+.description > h1 {
+    max-width: 390px;
+    font-size: 4rem;
+    line-height: 1;
+}
+
+.description > p {
+    max-width: 22em;
+    line-height: 1.5;
+    font-size: 17px;
+    color: hsl(0, 0%, 41%);
+    padding-bottom: 1em;
+    margin-top: -1.2em;
+}
+
+.btn {
+    background-color: #000;
+    color: #fff;
+    border-radius: .8em;
+    border: 2px solid hsl(0, 0%, 8%);
+    padding: .6em 0.1em .6em 0.1em;
+    width: 8em;
+    text-align: center;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.btn:hover {
+    background-color: hsl(0, 0%, 98%);
+    color: hsl(0, 0%, 8%);
+    border: 2px solid hsl(0, 0%, 8%);
+}
+
+.image {
+    align-self: center;
+}
+
+.lg-img {
+    max-width: 31em;
+    max-height: 31em;
+}
+
+.clients {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    padding-top: 3.5em;
+}
+
+.mobile-img {
+    display: none;
+}
+
+.up1, .up2, .up3, .up4 {
+    display: none;
+}
+
+.drop-down-1, .drop-down-2, .drop-down-3, .drop-down-4 {
+    display: inline;
+}
+
+.features-menu {
+    position: absolute;
+    margin-top: -20px;
+    margin-left: 120px;
+    padding: 1.1em;
+    box-shadow: 0 0 10px rgb(0 0 0 / 25%);
+}
+
+.features-menu, .slide-feature-menu {
+    display: none;
+    grid-template-columns: 1fr 3fr;
+    grid-column-gap: .1em ;
+    grid-row-gap: .7em ;
+    border-radius: .7em;
+    background-color: #fff;
+    color: hsl(0, 0%, 41%);
+}
+
+.company-menu {
+    position: absolute;
+    margin-left: 300px;
+    margin-top: -20px;
+    box-shadow: 0 0 10px rgb(0 0 0 / 25%);
+    padding: .1em 1.5em .1em 1.5em;
+    border-radius: .7em;
+}
+
+.company-menu, .slide-company-menu {
+    display: none;
+    background-color: #fff;
+    color: hsl(0, 0%, 41%);
+}
+
+.slide-feature-menu, .slide-company-menu {
+    width: 150px;
+    margin-left: 1.5em;
+}
+
+.slide-company-menu > span {
+    margin-top: .8em;
+}
+
+.slide-login {
+    text-align: center;
+    padding: 0 0 1em 0 ;
+}
+
+.slide-register {
+    margin-bottom: 5em;
+}
+
+#close-menu {
+    float: right;
+}
+
+.slide-bar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 50%;
+    background-color: #fff;
+    color: hsl(0, 0%, 41%);
+    padding: 2em;
+    transform: scale(0, 1);
+    transition: transform 350ms ease-in-out;
+    transform-origin: right;
+    z-index: 200;
+    overflow-y: scroll;
+}
+
+/* JS Classes */
+
+.slide-bar-open {
+    transform: scale(1, 1);
+    height: 100%;
+}
+
+.deem_page {
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    z-index: 1;
+    position: fixed;
+    opacity: 75%;
+}
+
+
+
+@media screen and (max-width: 630px) {
+
+    .navlinks, .login-register {
+        display: none;
+    }
+    
+    .open-menu, .logo {
+        padding: 1.5em;
+    }
+
+    .open-menu {
+        display: block;
+        grid-column: 3/3
+    }
+
+    .description {
+        display: grid;
+        justify-items: center;
+        padding: 20px;
+    }
+
+    .image {
+        display: none;
+    }
+
+    .clients {
+        justify-content: center;
+        column-gap: 4%;
+    }
+
+    .clients > img {
+        width: 4.5em;
+        height: 1.5em;
+    }
+
+    .description > h1 {
+        font-size: 2em;
+        line-height: 0;
+    }
+
+    .description > p {
+        max-width: 18.5em;
+        margin: 0;
+    }
+
+    .mobile-img {
+        display: block;
+        width: 100%;
+        height: 18em;
+    }
+}
